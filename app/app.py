@@ -20,6 +20,10 @@ def about(name):
     allUsers = data
     return render_template("about.html", name=name, userData=userData, allUsers=allUsers)
 
+@app.route('/health', methods=["GET"])
+def health():
+    return "<h1>Request received<h1>", 200
+
 
 
 if __name__ == "__main__":
