@@ -3,6 +3,9 @@ import os
 import json
 
 app = Flask(__name__)
+app.config['DATABASE'] = os.path.join(os.getcwd(), 'flask.sqlite') # add database
+
+
 data_file = open('./static/data.json')
 data = json.load(data_file)
 #data_file.close()
