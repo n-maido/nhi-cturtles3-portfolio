@@ -20,3 +20,5 @@ python3-virtualenv
 
 flask.sqlite
 response.txt
+
+nginx-certbot.env
