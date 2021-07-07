@@ -5,7 +5,7 @@
 
 function test_endpts(){
 	test_data="username=$1&password=$2"
-	portfolio_url="http://nhi-hawksbills.duckdns.org" #change back to https when we containerize nginx
+	portfolio_url="https://nhi-hawksbills.duckdns.org" #change back to https when we containerize nginx
 
 	# test health
 	echo "Testing /health..."
