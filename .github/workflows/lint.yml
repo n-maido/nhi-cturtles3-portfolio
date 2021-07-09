@@ -1,0 +1,5 @@
+name: Lint
+
+on:
+  # Trigger workflow on push or PR
+  #
