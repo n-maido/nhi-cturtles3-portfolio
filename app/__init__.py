@@ -1,4 +1,5 @@
-from flask import Flask, render_template, url_for, request, redirect, json
+#from flask import Flask, render_template, url_for, request, redirect, json
+from flask import Flask, render_template, request, json
 import os
 import json
 
@@ -40,24 +41,24 @@ class UserModel(db.Model):
     def __repr__(self):
         return f"<User {self.username}>"
 
-
-
-#Create URL routes
+# Create URL routes
 @app.route('/')
 def home():
     allUsers = data
     return render_template("home.html", allUsers=allUsers)
 
-#Create URL for each members
+# Create URL for each members
 @app.route('/about/<string:name>')
 def about(name):
     userData = data[name]
     allUsers = data
     return render_template("about.html", name=name, userData=userData, allUsers=allUsers)
 
+
 @app.route('/health', methods=["GET"])
 def health():
     return "<h1>Request received<h1>", 200
+
 
 @app.route('/register', methods=('GET', 'POST'))
 def register():
@@ -84,6 +85,7 @@ def register():
     # TODO: Return a register page
     return "Register Page not yet implemented", 501
 
+
 @app.route('/login', methods=('GET', 'POST'))
 def login():
     if request.method == 'POST':
@@ -105,6 +107,8 @@ def login():
     # TODO: Return a login page
     return "Login Page not yet implemented", 501
 
+
 if __name__ == "__main__":
     # rid (port="5002") within run function
-    app.run(debug=True) 
+    app.run(debug=True)
+    
