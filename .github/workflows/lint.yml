@@ -1,7 +1,8 @@
 name: Lint
 
 on:
-  # Trigger workflow on push or PR, but only for main branch
+  # Trigger workflow on push or PR,
+  # but only for main branch
   push:
     branches:
       - main
@@ -27,7 +28,7 @@ jobs:
         run: pip install black flake8
 
       - name: Run linters
-        uses: wearerequired/lint-action@v1.10.0
+        uses: wearerequired/lint-action@v1
         with:
           black: true
           flake8: true
