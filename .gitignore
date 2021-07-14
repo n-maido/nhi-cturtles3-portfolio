@@ -3,7 +3,7 @@ __pycache__
 
 venv/
 *.pyc
-nginx-certbot.env
+#nginx-certbot.env
 
 instance/
 
