@@ -9,10 +9,6 @@ from flask_migrate import Migrate
 from werkzeug.security import check_password_hash, generate_password_hash
 
 app = Flask(__name__)
-
-app.config["DATABASE"] = os.path.join(os.getcwd(), "flask.sqlite")
-
-app = Flask(__name__)
 app.config[
     "SQLALCHEMY_DATABASE_URI"
 ] = "postgresql+psycopg2://{user}:{passwd}@{host}:{port}/{table}".format(
